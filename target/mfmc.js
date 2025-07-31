@@ -1430,6 +1430,15 @@ SHADOW_IMPORT("goog.uri.utils.js");
 SHADOW_IMPORT("goog.uri.uri.js");
 SHADOW_IMPORT("goog.string.stringbuffer.js");
 SHADOW_IMPORT("cljs.core.js");
+SHADOW_IMPORT("clojure.string.js");
+SHADOW_IMPORT("cljs.core.match.js");
+SHADOW_IMPORT("shadow.js.js");
+SHADOW_IMPORT("shadow.js.shim.module$node_fs.js");
+SHADOW_IMPORT("shadow.js.shim.module$mfm_js.js");
+SHADOW_IMPORT("hickory.hiccup_utils.js");
+SHADOW_IMPORT("hickory.utils.js");
+SHADOW_IMPORT("hickory.render.js");
+SHADOW_IMPORT("clojure.walk.js");
 SHADOW_IMPORT("gay.block36.mfm.main.js");
 SHADOW_IMPORT("shadow.module.main.append.js");
 

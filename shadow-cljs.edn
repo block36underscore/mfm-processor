@@ -5,7 +5,8 @@
   "src/test"]
 
  :dependencies
-  []
+  [[org.clojure/core.match "1.1.0"]
+   [org.clj-commons/hickory "0.7.7"]]
 
  :builds
   {:app {:target :node-script
