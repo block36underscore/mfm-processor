@@ -11,6 +11,10 @@ Formatting:
 
 **BOLD**
 
+*italic*
+
+~~strikeout~~
+
 <small>small</small>
 
 <center>centered</center>

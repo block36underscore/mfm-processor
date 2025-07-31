@@ -81,6 +81,8 @@
       (format :em children)
     {:type "small" :children children}
       (format :small children)
+    {:type "strike" :children children}
+      (format :s children)
     {:type "center" :children children}
       (format :div 
               {:style "text-align:center;"}
