@@ -26,3 +26,12 @@ $[ruby **Miss***key* ミス**キー**]
 Links: https://www.block36.gay <- an inline link
 
 [a link with custom text](https://www.block36.gay)
+
+`inline code`
+
+```js
+//codeblock (js)
+function test(a) {
+  console.log("some codeblock")
+}
+```
