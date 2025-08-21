@@ -1,11 +1,17 @@
 (ns gay.block36.mfm.main
+  ;(:refer-clojure :exclude [await])
   (:require
    [clojure.string :refer [ends-with? replace split]]
    [clojure.core.match :refer [match]]
    ["node:fs" :as fs]
    ["mfm-js" :as mfm]
+   ["shiki" :as shiki]
+   ["sync-rpc" :as rpc]
    [hickory.render :refer [hiccup-to-html]]
-   [clojure.walk :as walk]))
+   [clojure.walk :as walk]
+   [promesa.core :as p]))
+
+(def shiki-processor (rpc (str js/__dirname "/shiki-server.js")))
 
 (defn read-args []
   (let [args (js->clj js/process.argv)]
@@ -87,6 +93,14 @@
       (format :div 
               {:style "text-align:center;"}
               children)
+    {:type "inlineCode" :props {:code code}}
+      (conj [:code]
+            code)
+    {:type "blockCode" :props {:code code
+                               :lang lang}}
+      (conj [:div] (shiki-processor #js{:code  code
+                                       :lang  lang
+                                       :theme "catppuccin-mocha"}))
     {:type "fn" :props {:name "ruby"}}
       (conj [:ruby]
             (let [words (sep-words in)]
@@ -105,6 +119,7 @@
              in)]])))
 
 (defn init []
+  (println (.-langs shiki))
   (match (read-args)
     [:error msg] (js/console.error msg)
     [:run input output] 

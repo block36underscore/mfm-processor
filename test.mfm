@@ -6,6 +6,8 @@ This is a [Misskey Flavored Markdown](https://misskey-hub.net/en/docs/for-users/
 > this is a quote block
 > a
 > **bold**
+>> nesting
+>> blockquote
 
 Formatting:
 
@@ -27,7 +29,7 @@ Links: https://www.block36.gay <- an inline link
 
 [a link with custom text](https://www.block36.gay)
 
-`inline code`
+`inline **code**`
 
 ```js
 //codeblock (js)
@@ -35,3 +37,37 @@ function test(a) {
   console.log("some codeblock")
 }
 ```
+
+```rs
+//other lang test
+pub fn something(&self) -> usize {
+  println!("{}", self.0);
+  30
+}
+```
+
+```racket
+(define (main b c)
+  (println (+ b c)))
+```
+
+# Markdown Extras
+
+### Lists
+
+- unordered list
+- bbbbb
+- λ
+  - indent
+
+1. ordered list
+2. number two
+  1. sublist
+
+### Horizontal Rule
+
+---
+
+a
+
+

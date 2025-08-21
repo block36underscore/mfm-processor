@@ -1,5 +1,5 @@
 #!/bin/bash
-shadow-cljs compile app
+shadow-cljs compile app shiki
 echo "
 ----- Compiling Done -----
 "
