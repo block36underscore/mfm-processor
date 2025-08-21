@@ -51,6 +51,10 @@ pub fn something(&self) -> usize {
   (println (+ b c)))
 ```
 
+$[flip MisskeyでFediverseの世界が広がります]
+$[flip.v MisskeyでFediverseの世界が広がります]
+$[flip.h,v MisskeyでFediverseの世界が広がります]
+
 # Markdown Extras
 
 ### Lists

@@ -101,6 +101,27 @@
       (conj [:div] (shiki-processor #js{:code  code
                                        :lang  lang
                                        :theme "catppuccin-mocha"}))
+    {:type "fn"
+     :props {:name "flip" 
+             :args {:h true
+                    :v true}}
+     :children children}
+      (format :span
+              {:style "display: inline-block; transform: scale(-1,-1);"}
+              children)
+    {:type "fn"
+     :props {:name "flip"
+             :args {:v true}}
+     :children children}
+      (format :span
+              {:style "display: inline-block; transform: scaleY(-1);"}
+              children)
+    {:type "fn"
+     :props {:name "flip"}
+     :children children}
+      (format :span
+              {:style "display: inline-block; transform: scaleX(-1);"}
+              children)
     {:type "fn" :props {:name "ruby"}}
       (conj [:ruby]
             (let [words (sep-words in)]
