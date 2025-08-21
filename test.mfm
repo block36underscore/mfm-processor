@@ -29,6 +29,8 @@ Links: https://www.block36.gay <- an inline link
 
 [a link with custom text](https://www.block36.gay)
 
+### Codeblocks
+
 `inline **code**`
 
 ```js
@@ -51,9 +53,16 @@ pub fn something(&self) -> usize {
   (println (+ b c)))
 ```
 
-$[flip MisskeyでFediverseの世界が広がります]
-$[flip.v MisskeyでFediverseの世界が広がります]
-$[flip.h,v MisskeyでFediverseの世界が広がります]
+### Flip
+
+$[flip Flip horizontally]
+$[flip.v Flip vertically]
+$[flip.h,v Flip both ways]
+
+### Font
+
+$[font.serif serif]
+$[font.monospace monospace]
 
 # Markdown Extras
 

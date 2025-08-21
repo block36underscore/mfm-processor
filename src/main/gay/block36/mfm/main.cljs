@@ -122,7 +122,17 @@
       (format :span
               {:style "display: inline-block; transform: scaleX(-1);"}
               children)
-    {:type "fn" :props {:name "ruby"}}
+    {:type "fn"
+     :props {:name "font"
+             :args args}
+     :children children}
+      (format :span
+              {:style (str "display: inline-block; font-family: "
+                           (name (key (first args)))
+                           ";")}
+              children)
+    {:type "fn"
+     :props {:name "ruby"}}
       (conj [:ruby]
             (let [words (sep-words in)]
                  (list (parse-mfm (first-word words))
