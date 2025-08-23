@@ -144,6 +144,14 @@
       (format :span
               {:class "_mfm_blur_"}
               children)
+    {:type "search"
+     :props {:query query}}
+      [:div {:class "_mfm_search_box"}
+        [:input {:type "search"
+                 :class "_mfm_search_input_"
+                 :value query}]
+        [:button {:class "_mfm_search_button_"}
+                 "search"]]
     :else [:span (str in)]))
 
 (defn mfm->html [in]

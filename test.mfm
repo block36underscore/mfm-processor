@@ -68,6 +68,13 @@ $[font.monospace monospace]
 
 $[blur Blurred text]
 
+### Search 
+
+A very minimal implementation is done here to allow users to customize what the search button should do.
+
+
+Search something search
+
 # Markdown Extras
 
 ### Lists
