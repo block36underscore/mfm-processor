@@ -138,16 +138,25 @@
                  (list (parse-mfm (first-word words))
                        (conj [:rt]
                              (parse-mfm (second-word words))))))
+    {:type "fn"
+     :props {:name "blur"}
+     :children children}
+      (format :span
+              {:class "_mfm_blur_"}
+              children)
     :else [:span (str in)]))
 
 (defn mfm->html [in]
   (hiccup-to-html
     (list
       [:html
-       [:body
-        (map (fn [node] 
-                 (parse-mfm (walk/keywordize-keys node)))
-             in)]])))
+        [:head
+          [:link {:rel "stylesheet" 
+                  :href "style.css"}]]
+        [:body
+          (map (fn [node] 
+                   (parse-mfm (walk/keywordize-keys node)))
+               in)]])))
 
 (defn init []
   (println (.-langs shiki))

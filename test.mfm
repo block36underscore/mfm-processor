@@ -64,6 +64,10 @@ $[flip.h,v Flip both ways]
 $[font.serif serif]
 $[font.monospace monospace]
 
+### Blur
+
+$[blur Blurred text]
+
 # Markdown Extras
 
 ### Lists

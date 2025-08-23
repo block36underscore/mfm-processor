@@ -1,0 +1,9 @@
+._mfm_blur_:hover {
+  filter: blur(0);
+}
+
+._mfm_blur_ {
+  filter: blur(6px);
+  transition: filter .3s;
+}
+
