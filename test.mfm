@@ -75,6 +75,12 @@ A very minimal implementation is done here to allow users to customize what the 
 
 Search something search
 
+### Colors
+
+$[fg.color=f00 red]
+$[bg.color=ff0 yellow]
+$[bg.color=3353ef $[fg.color=aafe77 *something* **else**]]
+
 # Markdown Extras
 
 ### Lists

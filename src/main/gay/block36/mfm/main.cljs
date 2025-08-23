@@ -144,6 +144,19 @@
       (format :span
               {:class "_mfm_blur_"}
               children)
+    {:type "fn"
+     :props {:name (name :guard 
+                           #(contains? #{"fg" "bg"}
+                                       %))
+             :args {:color color}}
+     :children children}
+    (format :span
+            {:style (str (if (= name "fg")
+                             "color: "
+                             "background-color: ")
+                         color
+                         ";")}
+            children)
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}
