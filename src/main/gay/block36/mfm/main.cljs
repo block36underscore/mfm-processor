@@ -184,6 +184,15 @@
                                ""
                                "overflow: clip;"))}
               children))
+    {:type "fn"
+     :props {:name "rotate"
+             :args {:deg deg}}
+     :children children}
+      (format :span
+              {:style (str "display: inline-block; transform: rotate("
+                           deg
+                           "deg);  transform-origin: center center;")}
+              children)
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}

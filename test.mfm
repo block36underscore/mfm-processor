@@ -115,6 +115,14 @@ $[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
 
 $[position.x=1.5 完全に理解した]]
 
+### Rotate
+
+
+
+$[rotate.deg=30 miss**key** $[border.style=solid,width=4 Rotated style]]
+
+
+
 # Markdown Extras
 
 ### Lists
