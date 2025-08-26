@@ -157,6 +157,33 @@
                          color
                          ";")}
             children)
+    {:type "fn"
+     :props {:name "border" :args args}
+     :children children}
+    (let [{style  :style
+           width  :width
+           color  :color
+           radius :radius
+           noclip :noclip}
+            (merge {:style  "solid"
+                    :width  "1"
+                    :color  "000"
+                    :radius "0"
+                    :noclip false} args)]
+      (format :span 
+              {:style (str "border: "
+                           width
+                           "px "
+                           style
+                           " #"
+                           color
+                           "; border-radius:"
+                           radius
+                           "px; "
+                           (if noclip
+                               ""
+                               "overflow: clip;"))}
+              children))
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}
