@@ -196,6 +196,22 @@
                            deg
                            "deg);  transform-origin: center center;")}
               children)
+    {:type "fn"
+     :props {:name "position"
+             :args args}
+     :children children}
+    (let [{x :x
+           y :y}
+            (merge {:x 0
+                    :y 0}
+                   args)]
+      (format :span
+              {:style (str "display: inline-block; transform: translateX("
+                           x
+                           "em) translateY("
+                           y
+                           "em);")}
+              children))
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}
