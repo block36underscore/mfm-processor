@@ -75,6 +75,9 @@
       (format :span seq)
     {:type "text" :props {:text text}}
       (replace text "\n" "<br>")
+    {:type "unicodeEmoji"
+     :props {:emoji emoji}}
+      emoji
     {:type "quote" :children children}
       (format :blockquote children)
     {:type "url" :props {:url url}}
