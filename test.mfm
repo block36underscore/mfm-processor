@@ -127,6 +127,15 @@ $[rotate.deg=30 miss**key** $[border.style=solid,width=4 Rotated style]]
 
 😏$[position.x=0.8,y=0.5 🍮]😀
 
+### Scale
+
+$[scale.x=4,y=2 🍮]
+$[scale.y=2 🍮]
+
+$[x2 x2]
+$[x3 x3]
+$[x4 x4]
+
 # Markdown Extras
 
 ### Lists

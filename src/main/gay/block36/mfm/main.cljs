@@ -200,18 +200,49 @@
      :props {:name "position"
              :args args}
      :children children}
-    (let [{x :x
-           y :y}
-            (merge {:x 0
-                    :y 0}
-                   args)]
+      (let [{x :x
+             y :y}
+              (merge {:x 0
+                      :y 0}
+                     args)]
+        (format :span
+                {:style (str "display: inline-block; transform: translateX("
+                             x
+                             "em) translateY("
+                             y
+                             "em);")}
+                children))
+    {:type "fn"
+     :props {:name "scale"
+             :args args}
+     :children children}
+      (let [{x :x
+               y :y}
+                (merge {:x 1
+                        :y 1}
+                       args)]
+        (format :span
+                {:style (str "display: inline-block; transform: scale("
+                             x
+                             ", "
+                             y
+                             ");")}
+                children))
+    {:type "fn"
+     :props {:name (name :guard
+                           #(contains? #{"x2"
+                                         "x3"
+                                         "x4"}
+                                       %))}
+     :children children}
       (format :span
-              {:style (str "display: inline-block; transform: translateX("
-                           x
-                           "em) translateY("
-                           y
-                           "em);")}
-              children))
+              {:style (str "font-size:"
+                           (match name
+                                  "x2" "200%"
+                                  "x3" "400%"
+                                  "x4" "600%")
+                           ";")}
+              children)
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}
