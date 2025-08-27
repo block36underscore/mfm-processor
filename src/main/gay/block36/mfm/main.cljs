@@ -145,7 +145,7 @@
      :props {:name "blur"}
      :children children}
       (format :span
-              {:class "_mfm_blur_"}
+              {:class "mfm-blur"}
               children)
     {:type "fn"
      :props {:name (name :guard 
