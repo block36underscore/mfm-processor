@@ -136,6 +136,40 @@ $[x2 x2]
 $[x3 x3]
 $[x4 x4]
 
+### Animations
+
+#### Jelly
+$[jelly 🍮] $[jelly.speed=5s 🍮]
+
+#### Ta-Da
+$[tada 🍮] $[tada.speed=5s 🍮]
+
+#### Jump
+$[jump 🍮] $[jump.speed=5s 🍮]
+
+#### Bounce
+$[bounce 🍮] $[bounce.speed=5s 🍮]
+
+#### Spin
+
+$[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
+$[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
+$[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
+
+$[spin.speed=5s 🍮]
+
+#### Shake
+
+$[shake 🍮] $[shake.speed=5s 🍮]
+
+#### Twitch
+$[twitch 🍮] $[twitch.speed=5s 🍮]
+
+#### Rainbow
+$[rainbow 🍮] $[rainbow.speed=5s 🍮]
+$[rainbow 色なし文字]
+$[rainbow $[fg.color=f0f 色付き文字]]
+
 # Markdown Extras
 
 ### Lists
