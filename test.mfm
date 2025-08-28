@@ -170,6 +170,9 @@ $[rainbow 🍮] $[rainbow.speed=5s 🍮]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]
 
+#### Blink
+$[blink 🍮]
+
 # Markdown Extras
 
 ### Lists

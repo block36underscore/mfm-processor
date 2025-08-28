@@ -8,8 +8,7 @@
    ["shiki" :as shiki]
    ["sync-rpc" :as rpc]
    [hickory.render :refer [hiccup-to-html]]
-   [clojure.walk :as walk]
-   [promesa.core :as p]))
+   [clojure.walk :as walk]))
 
 (def shiki-processor (rpc (str js/__dirname "/shiki-server.js")))
 
@@ -217,10 +216,10 @@
              :args args}
      :children children}
       (let [{x :x
-               y :y}
-                (merge {:x 1
-                        :y 1}
-                       args)]
+             y :y}
+               (merge {:x 1
+                       :y 1}
+                      args)]
         (format :span
                 {:style (str "display: inline-block; transform: scale("
                              x
@@ -243,6 +242,61 @@
                                   "x4" "600%")
                            ";")}
               children)
+    {:type "fn"
+     :props {:name (name :guard
+                           #(contains? #{"jelly"
+                                         "tada"
+                                         "jump"
+                                         "bounce"
+                                         "shake"
+                                         "twitch"
+                                         "rainbow"
+                                         "blink"}
+                                       %))
+             :args args}
+     :children children}
+      (let [speed (or (get args :speed)
+                      (match name
+                             (:or "jump"
+                                  "bounce") "0.75s"
+                             (:or "shake"
+                                  "twitch") "0.5s"
+                             :else "1s"))]
+           (format :span
+                   {:style (str "display: inline-block;animation: mfm-"
+                                name
+                                " "
+                                speed
+                                " linear infinite both;")}
+                   children))
+    {:type "fn"
+     :props {:name "spin"
+             :args args}
+     :children children}
+      (let [{left      :left
+             alternate :alternate
+             speed     :speed
+             x         :x
+             y         :y}
+               (merge {:left      false
+                       :alternate false
+                       :speed     "1.5s"
+                       :x         false
+                       :y         false}
+                      args)]
+        (format :span
+                {:style (str "display: inline-block; animation: mfm-spin"
+                             (cond x     "X"
+                                   y     "Y"
+                                   :else "")
+                             " "
+                             speed
+                             " linear infinite; animation-direction: "
+                             (cond left      "reverse"
+                                   alternate "alternate"
+                                   :else     "normal")
+                             ";")}
+                children))
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}

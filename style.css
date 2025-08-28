@@ -11,11 +11,11 @@
   transition: filter .3s;
 }
 
-/* The following CSS is copied from
+/* The following CSS is copied and slightly modified from
 *  https://github.com/fruitriin/mfm-renderer/blob/69430f4782af74650cffc27e2d8dcc0da02fb6d5/src/style.css
 *  And used under the MIT license Copyright (c) 2024 by 果物リン*/
 
-@keyframes blink {
+@keyframes mfm-blink {
   0% {
     opacity: 1;
     transform: scale(1);
@@ -32,7 +32,7 @@
   }
 }
 
-@keyframes tada {
+@keyframes mfm-tada {
   0% {
     transform: scaleZ(1);
   }
@@ -306,7 +306,7 @@
   }
 }
 
-@keyframes mfm-rubberBand {
+@keyframes mfm-jelly {
   0% {
     transform: scaleZ(1);
   }
