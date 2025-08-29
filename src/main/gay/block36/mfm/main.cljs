@@ -297,6 +297,9 @@
                                    :else     "normal")
                              ";")}
                 children))
+    {:type "plain"
+     :children [{:type "text" :props {:text text}}]}
+      text
     {:type "search"
      :props {:query query}}
       [:div {:class "_mfm_search_box"}
