@@ -1,3 +1,34 @@
+.mfm-sparkle {
+  color: #ffd147;
+  scale: 0.75;
+  animation-duration: 5s;
+  animation-name: mfm-sparkle-anim;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+  animation-timing-function: linear;
+}
+
+@keyframes mfm-sparkle-anim {
+  0% {
+    transform: rotate(0);
+    scale: 0;
+  }
+
+  10% {
+    transform: rotate(180deg);
+    scale: 1;
+  }
+
+  20% {
+    transform: rotate(360deg);
+    scale: 0;
+  }
+
+  100% {
+    scale: 0;
+  }
+}
+
 /* This css is adapted from the page source of
 *  https://misskey-hub.net/en/docs/for-users/features/mfm
 */

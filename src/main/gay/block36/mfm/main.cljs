@@ -68,6 +68,9 @@
   ([tag properties children]
    (conj [tag properties] (map parse-mfm children))))
 
+(defn rand-pos []
+  (- (- (rand) 0.5) 1))
+
 (defn parse-mfm [in]
   (match in
     (seq :guard seq?)
@@ -297,6 +300,23 @@
                                    :else     "normal")
                              ";")}
                 children))
+    {:type "fn"
+     :props {:name "sparkle"}
+     :children children}
+    (into [] (concat [:span]
+          [(map parse-mfm children)]
+          [[:span
+            {:style "position: relative; width: 0; height: 0"}
+            (for [x (range 0 5)]
+                [:span.mfm-sparkle
+                 {:style (str "scale: 0; position: absolute; left: "
+                              (rand-pos)
+                              "em; top: "
+                              (rand-pos)
+                              "em; animation-delay:"
+                              x
+                              "s;")}
+                 "✦"])]]))
     {:type "plain"
      :children [{:type "text" :props {:text text}}]}
       text
